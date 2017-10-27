@@ -1,0 +1,33 @@
+Version-1
+n=5
+count-15474725
+elapsed time- 00:00:10.4296022
+instructions per sec- 1483731
+n=10
+count-39219579
+elapsed time- 00:00:26.3349186
+instructions per sec- 1489261
+n=50
+count-1643217405
+elapsed time- 00:21:44.3216053
+instructions per sec- 1259825
+Lines Of Code = 88
+Only registers used
+
+Version-2
+n=5
+count-64383
+elapsed time- 00:00:00.0625030
+instructions per sec- 1030078
+n=10
+count-215482
+elapsed time- 00:00:00.6708543
+instructions per sec- 321205
+n=50
+count- 3680523
+elapsed time- 00:00:03.3610051
+instructions per sec- 1095066
+Lines Of Code = 110
+n=100
+Stack Memory Used = 2 words
+

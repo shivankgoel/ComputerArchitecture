@@ -1,0 +1,43 @@
+i have asked sir about flags . this is how we have to set flags .
+The DP instructions set the flags if the S bit is set. For test and compare instructions (TST, TEQ,CMP, CMN), S is always assumed to be set.
+
+In the logical operations (AND, EOR, TST, TEQ, ORR, MOV, BIC, MVN), the V flag will be unaffected, 
+the C flag will be set to the carry out from the barrel shifter (or preserved when there is no shift), 
+the Z flag will be set if and only if the result is all zeros, and 
+the N flag will be set to the logical value of bit 31 of the result.
+
+In the arithmetic operations (SUB, RSB, ADD, ADC, SBC, RSC, CMP, CMN), the V flag will be set if an overflow occurs into bit 31 of 
+the result. The C flag will be set to the carry out of bit 31 of the ALU, the Z flag will be set if and only if the result was zero, 
+and the N flag will be set to the value of bit 31 of the result.
+
+In MUL instruction also, setting the flags is controlled by the S bit in the instruction. The N (Negative) and Z (Zero) flags are 
+set correctly on the result (N is made equal to bit 31 of the result, and Z is set if and only if the result is zero). The C (Carry) flag is 
+set to a meaningless value and the V (oVerflow) flag is unaffected.
+
+if(sbit = '1') then
+if (sout(31 downto 0) = "00000000000000000000000000000000") then fnzcv(2) <= '1'; end if;
+fnzcv(3) <= sout(31);
+end if;
+_________________________________________________________________________________________
+
+if(sbit = '1') then
+ 
+fnzcv(3) <= sout(31);
+
+if (sout(31 downto 0) = "00000000000000000000000000000000") then fnzcv(2) <= '1';  end if;
+
+if(sout(32) = '1' ) then fnzcv(1) <= '1'; end if;
+
+a31(30 downto 0) <= ain(30 downto 0);  a31(31) <= '0';
+b31(30 downto 0) <= bin(30 downto 0);  b31(31) <= '0';
+sum31 <= std_logic_vector(  signed(a31)  + signed(b31));
+if( sout(32) /= sum31(31) ) then fnzcv(0) <= '1'; end if;
+
+end if;
+
+_____________________________________________________________________________________________
+
+
+if (sout(31 downto 0) = "00000000000000000000000000000000") then fnzcv(2) <= '1';
+fnzcv(3) <= sout(31);
+if(sout(32) = '1' ) then fnzcv(1) <= '1';

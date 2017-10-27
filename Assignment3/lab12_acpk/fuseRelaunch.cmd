@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Ayush/Downloads/lab12_final/lab12_acpk/processor_isim_beh.exe" -prj "C:/Users/Ayush/Downloads/lab12_final/lab12_acpk/processor_beh.prj" "work.processor" 

@@ -1,0 +1,5 @@
+vhdl work "registerFile.vhd"
+vhdl work "PC.vhd"
+vhdl work "IR.vhd"
+vhdl work "ipcore_dir/BRAM.vhd"
+vhdl work "processor.vhd"

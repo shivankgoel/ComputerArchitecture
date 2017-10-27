@@ -1,0 +1,5 @@
+work	"IR.vhd"
+work	"PC.vhd"
+work	"ipcore_dir/BRAM.vhd"
+work	"processor.vhd"
+work	"registerFile.vhd"

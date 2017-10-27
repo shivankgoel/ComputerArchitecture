@@ -1,0 +1,3 @@
+vhdl isim_temp "alu.vhd"
+vhdl isim_temp "alucombine.vhd"
+vhdl isim_temp "add2four.vhd"
